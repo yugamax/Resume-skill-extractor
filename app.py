@@ -8,13 +8,10 @@ import os
 import logging
 import ai_parser
 
-
-# --- Logging setup ---
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger("resume-extractor")
 
-# --- FastAPI app ---
-app = FastAPI(title="AI-driven Resume Skill Extractor (split scripts)")
+app = FastAPI(title="AI-driven Resume Skill Extractor")
 
 app.add_middleware(
     CORSMiddleware,
