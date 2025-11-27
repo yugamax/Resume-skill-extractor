@@ -172,6 +172,6 @@ def extract_resume_info(resume_text: str):
     return {
         "skills": skills,
         "is_resume": is_resume,
-        "confidence": round(confidence, 3),
+        "confidence": str(round(confidence, 3)*100) + "%",
         "error": error
     }

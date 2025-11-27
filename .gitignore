@@ -23,6 +23,7 @@ Thumbs.db
 *.docx
 *.doc
 *.tmp
+frontend.html
 
 # General
 *.sqlite3
