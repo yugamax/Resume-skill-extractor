@@ -123,17 +123,17 @@ async def upload_resume(file: UploadFile = File(...)):
             "skills": skills,
             "error": f"AI parsing error: {parsed.get('error')}",
             "ai_raw": parsed.get("raw"),
-            "client_used": parsed.get("client_used"),
-            "confidence": parsed.get("confidence")
+            "client_used": parsed.get("client_used")
         })
 
     # Successful response
+    is_resume_val = parsed.get("is_resume", False)
+    is_resume = True if is_resume_val else False
     response_payload = {
         "filename": filename,
         "extension": ext,
         "skills": skills,
-        "is_resume": parsed.get("is_resume", False),
-        "confidence": parsed.get("confidence", 0.0),
+        "is_resume": is_resume
     }
     return JSONResponse(content=response_payload)
 

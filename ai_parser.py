@@ -138,7 +138,6 @@ def extract_resume_info(resume_text: str):
 
     skills = []
     is_resume = False
-    confidence = 0.0
 
     if isinstance(parsed, dict):
         # ----- Skills -----
@@ -160,11 +159,6 @@ def extract_resume_info(resume_text: str):
         # ----- Metadata -----
         is_resume = bool(parsed.get("is_resume", False))
 
-        try:
-            confidence = float(parsed.get("confidence", 0.0))
-        except Exception:
-            confidence = 0.0
-
     else:
         if not error:
             error = "Model did not return valid JSON."
@@ -172,6 +166,5 @@ def extract_resume_info(resume_text: str):
     return {
         "skills": skills,
         "is_resume": is_resume,
-        "confidence": str(round(confidence, 3)*100) + "%",
         "error": error
     }
