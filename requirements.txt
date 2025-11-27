@@ -5,4 +5,3 @@ python-multipart
 python-docx
 PyPDF2
 requests
-mammoth
