@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+.env
+
+# VS Code
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+
+# LibreOffice conversion temp
+*.docx
+*.doc
+*.tmp
+
+# General
+*.sqlite3
+*.db
+*.bak
+*.swp
+*.swo
+
+# Environment
+.env*
+
+# Dependency
+*.egg-info/
+dist/
+build/
+
+# Ignore uploads and large files
+uploads/
+*.pdf
+*.docx
+*.doc
+
+# Ignore requirements lock
+requirements.lock
