@@ -6,3 +6,4 @@ python-docx
 PyPDF2
 requests
 groq
+dotenv
