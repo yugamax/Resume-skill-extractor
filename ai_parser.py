@@ -5,7 +5,7 @@ import os
 import json
 import time
 import logging
-from typing import List, Tuple, Optional
+from typing import List, Tuple, Optional, Any, cast
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -98,7 +98,7 @@ def _call_groq_sync(prompt_text: str, user_message: str = "", max_attempts: int 
                 logger.info("Calling Groq client %d (attempt %d)", idx, attempt)
                 resp = client.chat.completions.create(
                     model="llama-3.3-70b-versatile",
-                    messages=messages,
+                    messages=cast(Any, messages),
                     temperature=0.0,
                     max_tokens=4096,
                 )
